@@ -4,13 +4,19 @@
     "react-router-dom": "^7.0.1",
     "tailwindcss": "^3.4.15"
   },
+  "homepage": "https://abdull-ah-med.github.io/TFG",
+
   "scripts": {
     "start": "concurrently \"npm start --prefix client\" \"npm run dev --prefix server\"",
     "client": "npm start --prefix client",
     "server": "npm start --prefix server",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon server/server.js",
+    "predeploy": "npm run build --prefix client",  
+    "deploy": "gh-pages -d client/build",
+    "build": "react-scripts build --prefix client"
   },
   "devDependencies": {
-    "concurrently": "^9.1.0"
+    "concurrently": "^9.1.0",
+    "gh-pages": "^6.2.0"
   }
 }

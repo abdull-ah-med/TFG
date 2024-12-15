@@ -9,7 +9,7 @@ import Contact from './pages/ContactUs'; // Import Contact page
 
 function App() {
   return (
-    <Router>
+    <Router basename="/TFG"> {/* Add basename here */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
